@@ -1,0 +1,188 @@
+* {
+    box-sizing: border-box;
+}
+
+body{
+    margin: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: #f4f4f4;
+}
+
+/* HEADER */
+
+header{
+    background: linear-gradient(90deg, #00c6ff, #0072ff);
+    color: white;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    padding: 15px;
+}
+
+.personal{
+    width: 100px;
+    height: 100px;
+    border-radius: 60%;
+}
+
+/* MENU */
+
+.nav-list{
+    display: flex;
+    gap: 20px;
+    list-style: none;
+}
+
+.nav-list a{
+    color: white;
+    text-decoration: none;
+}
+
+.menu-abrir,
+.menu-cerrar{
+    display: none;
+}
+
+/* SECCIONES */
+
+.seccion{
+    padding: 40px;
+    text-align: center;
+}
+
+.sobre-mi{
+    padding: 60px 20px;
+    background-color: #f4f4f4;
+}
+
+.contenedor-sobre{
+    max-width: 900px;
+
+    margin: auto;
+
+    background-color: white;
+
+    padding: 40px;
+
+    border-radius: 15px;
+
+    box-shadow: 0px 0px 15px rgba(0,0,0,0.2);
+
+    text-align: center;
+}
+
+.contenedor-sobre h2{
+    font-size: 40px;
+
+    margin-bottom: 25px;
+
+    color: #0072ff;
+}
+
+.contenedor-sobre p{
+    font-size: 18px;
+
+    line-height: 1.8;
+
+    color: #333;
+}
+
+.contenedor-sobre span{
+    color: #0072ff;
+
+    font-weight: bold;
+}
+/* CARDS */
+
+.contenedor-cards{
+    display: grid;
+
+    grid-template-columns: repeat(2, 1fr);
+
+    gap: 30px;
+
+    max-width: 1000px;
+
+    margin: auto;
+
+    justify-items: center;
+
+}
+
+.card{
+    background-color: white;
+
+    width: 300px;
+
+    padding: 20px;
+
+    border-style: groove;
+    border-radius: 40px;
+
+    box-shadow: 0px 0px 10px rgba(0,0,0,0.2);
+}
+
+.contacto{
+    background: linear-gradient(90deg, #00c6ff, #0072ff);
+    padding: 25px;
+    color: white;
+    text-align: center;
+}
+
+footer {
+    background: linear-gradient(90deg, #232526, #414345);
+    color:white;
+    
+    padding: 5px;
+
+    border-top: 1px solid rgba(255,255,255,0.5);
+    text-align: center;
+}
+
+/* RESPONSIVE */
+
+@media screen and (max-width: 700px){
+
+    .menu-abrir,
+    .menu-cerrar{
+        display: block;
+        border: 0;
+        font-size: 25px;
+        background-color: transparent;
+        color: white;
+        cursor: pointer;
+    }
+
+    .nav{
+        opacity: 0;
+        visibility: hidden;
+
+        display: flex;
+        flex-direction: column;
+        align-items: end;
+
+        gap: 20px;
+
+        position: absolute;
+        top: 0;
+        right: 0;
+
+        background-color: #222;
+
+        padding: 20px;
+
+        height: 100vh;
+    }
+
+    .nav.visible{
+        opacity: 1;
+        visibility: visible;
+    }
+
+    .nav-list{
+        flex-direction: column;
+        align-items: end;
+    }
+}
